@@ -1,0 +1,444 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.header-h2 {
+    text-align: center;
+    color: black;
+}
+
+.images-and-descriptions-of-members-title {
+    color: #282d30;
+    text-align: center;
+    font-size: 50px;
+    margin-bottom: 100px;
+}
+
+.image {
+    height: 165px;
+    width: 165px;
+    border-radius: 45px;
+    transition: all .2s ease-in-out;
+}
+
+.image:hover {
+    transform: scale(1.1);
+}
+.image:hover + .member-hidden {
+    background-color:#282d30;
+    padding:20px 15px 25px 25px;
+    max-width:400px;
+    z-index: 1;
+    border-radius:20px;
+    display: block;
+    bottom: 0px;
+    box-shadow:0 30px 30px 0px rgba(0,0,0,.1);
+    cursor:default;
+}
+
+.member-hidden:before {
+	content:"";
+	width:0;
+	height:0;
+	border-color:transparent transparent #282d30;
+	border-style:solid;
+	border-width:0 8px 10px;
+	top:-20px;
+	left:100px;
+}
+
+.name {
+    color: white;
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.member-name-bold {
+    font-weight: bold;
+}
+
+.email {
+    margin-bottom: 15px;
+}
+
+.at-logo {
+    width: 13px;
+    height: 13px;
+    margin-right: 12px;
+}
+
+.email-link {
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.description {
+    font-size: 15px;
+    line-height: 15px;
+    text-align: left;
+    color: gray;
+    cursor: text;
+    word-wrap:break-word;
+}
+
+.images-and-descriptions-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1350px;
+    margin: auto;
+    position: relative;
+}
+
+
+.images-of-alumnis-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 975px;
+    margin: auto;
+    position:relative;
+}
+
+.images-of-alumnis {
+    position: relative;
+}
+.alumni-title {
+    margin-top: 30px;
+    margin-bottom: 50px;
+    font-size: 15px;
+    text-align: center;
+    color: gray;
+}
+
+.member-seen, .alumni-seen {
+    margin: 0 20px 60px;
+}
+
+.member-hidden, .alumni-hidden {
+    display: none;
+}
+
+.alumni-image {
+    height: 65px;
+    width: 65px;
+    border-radius: 50%;
+    transition: all .1s ease-in-out;
+}
+
+.alumni-image:hover {
+    transform: scale(1.2);
+}
+.alumni-seen {
+    position: relative;
+}
+
+.alumni-image:hover + .alumni-hidden {
+    display: block;
+    background-color: black;
+    width: 150px;
+    height: 50px;
+	border-radius:5px;
+	bottom:15px;
+    color: white;;
+}
+
+.alumni-hidden:before {
+    content:"";	
+	width:0;
+	height:0;
+	border-color:transparent transparent rgb(39, 38, 38);
+	border-style:solid;
+	border-width:0 5px 5px;
+	top:-4px;
+}
+
+.alumni-hidden:before, .alumni-hidden {
+    position:absolute;
+    left:-25px;
+    transform:translateY(120%);
+}
+
+.member-seen:last-child .member-hidden {
+	left:-200px
+}
+
+.member-seen:last-child .member-hidden:before {
+	left:calc(100% - 100px);
+}
+
+.sponsors {
+    max-width: 1120px;
+    margin: auto;
+}
+
+.support-us-title, .silver-sponsors-title {
+    font-size: 40px;
+    text-align: left;
+    color: #001618;
+}
+
+.general-sponsor {
+    margin: auto;
+    display: flex;
+    flex-flow: row;
+}
+
+.slider-container {
+    position: relative;
+    max-width: 100%;
+}
+.slider {
+    animation: fade 12s ease-in-out infinite;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 250px;
+    width: 32vw;
+}
+.underline {
+    animation: fade-color 12s ease-in-out infinite;
+    width: 30px;
+    height: 7px;
+    background-color: rgb(48, 206, 193);
+    margin: 0px 15px;
+}
+.one {
+    animation-delay:9s;
+}
+.two {
+    animation-delay:6s;
+}
+.three {
+    animation-delay:3s;
+}
+.four {
+    animation-delay:0s;
+}
+
+@keyframes fade-color {
+    0% {opacity: 0.5;}
+    20% {opacity: 1;}
+    33% {opacity: 1;}
+    53% {opacity: 0.5;}
+    100% {opacity: 0.5;}
+}
+
+
+@keyframes fade {
+    0% {opacity: 0;}
+    20% {opacity: 1;}
+    33% {opacity: 1;}
+    53% {opacity: 0;}
+    100% {opacity: 0;}
+}
+.slide-show-underlines {
+    margin-top: 280px;
+    margin-left: 75px;
+    display:flex;
+    flex-direction: row;
+}
+.general-sponsor-link {
+    min-width: 50%;
+    min-height: 700px;
+    position: relative;
+}
+
+.general-sponsor-container {
+    background-color: rgb(48, 206, 193);
+    list-style: none;
+    width: 200px;
+    height: 120px;
+    padding: 20px;
+    margin: 0;
+    position: absolute;
+    right: 0;
+    transform: translateY(100%);
+}
+
+.general-sponsor, .golden--sponsor {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: bold;
+}
+
+.rimac-automobili {
+    text-decoration: none;
+    color: black;
+    font-size: 25px;
+    margin-top: 5px;
+    font-weight: 800;
+    line-height: 45px;
+}
+
+.general-sponsor-description {
+    padding: 30px;
+}
+
+.rimac-logo {
+    width: 7vw;
+    height: auto;
+    margin-top: 60px;
+}
+
+.general-sponsor-description-text {
+    font-size: 17px;
+    line-height: 35px;
+    color: black;
+    font-weight: normal;
+}
+
+.golden-sponsors {
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 33% 33% 34%;
+}
+
+.extension-engine-sponsor {
+    grid-column-start: 2;
+    grid-row-start: 2;
+} 
+.hattrick-sponsor {
+    grid-column-start: 1;
+    grid-row-start: 3;
+} 
+.ericsson-sponsor {
+    grid-column-start: 1;
+    grid-row-start: 1;
+}
+
+.golden-sponsor {
+    margin: 0;
+    position: relative;
+}
+.golden-sponsor-image {
+    height: 250px;
+    width: 32vw;
+}
+
+.container {
+    background-color: rgb(44, 55, 63);
+    list-style: none;
+    width: 225px;
+    height: 120px;
+    padding: 20px;
+    margin: 0;
+    position: absolute;
+    right: 0;
+    transform: translateY(-30%);
+}
+
+.extension-engine-container {
+    left: 0;
+    transform: translateY(200%);
+}
+
+.hattrick-container, .extension-engine-container{
+    height: 70px;
+}
+.ericsson-nikola-tesla, .hattrick, .extension-engine{
+    color:rgb(48, 206, 193);
+    font-size: 25px;
+    margin-top: 5px;
+    font-weight: 800;
+    line-height: 45px;
+    text-decoration: none;
+}
+
+.ericsson-logo {
+    height: 60px;
+    width: 60px;
+}
+
+.golden-sponsor-description-text {
+    font-size: 17px;
+    line-height: 35px;
+    margin-top: 50px;
+}
+
+.golden-sponsor-description {
+    width: 26vw;
+    margin-left:30px;
+    padding: 30px;
+    padding-top: 0;
+}
+.hattrick-logo {
+    margin-top: 15px;
+    height:20px;
+    width: auto;
+}
+
+.extension-engine-logo{
+    margin-top: 30px;
+    height: 30px;
+    width: auto;
+}
+
+.sponsor-category{
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 33% 33% 34%;
+}
+
+.logo {
+    margin: 20px 0px 10px;
+}
+.logo--image {
+    height: 30px;
+    width: auto;
+}
+
+@media only screen and (max-width:800px){
+
+    .general-sponsor {
+        flex-flow: column;
+    }
+    .general-sponsor-description {
+        margin-top:-420px;
+    }
+    
+    .sponsor-category{
+        display: grid;
+        grid-template-columns: 33% 33% 34%;
+        grid-template-rows: 20% 20% 20% 20% 20%;
+    }
+
+    .golden-sponsors {
+        margin-top: 60px;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 33% 33% 34%;
+    }
+    
+    .extension-engine-sponsor {
+        grid-column-start: 1;
+        grid-row-start: 2;
+    } 
+    .hattrick-sponsor {
+        grid-column-start: 1;
+        grid-row-start: 3;
+    } 
+    .ericsson-sponsor {
+        grid-column-start: 1;
+        grid-row-start: 1;
+    }
+}
+@media only screen and (max-width:600px){
+    .sponsor-category{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 14% 14% 14% 14% 14% 14% 16%;
+    }
+
+}
+
+
+
+
+
+
